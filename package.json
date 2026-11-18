@@ -1,0 +1,19 @@
+{
+  "name": "project-deadline-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Track client projects, deadlines, budgets and statuses.",
+  "scripts": {
+    "setup": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm start --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}

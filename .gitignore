@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+.vercel/
+
+# The SQLite database file is created and seeded automatically on first run.
+server/data.sqlite
+server/data.sqlite-*

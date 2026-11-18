@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm install && npm install --prefix client",
+  "buildCommand": "npm run build",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    {
+      "source": "/api/projects/:id/status",
+      "destination": "/api/project-status?id=:id"
+    },
+    {
+      "source": "/projects",
+      "destination": "/index.html"
+    }
+  ]
+}
